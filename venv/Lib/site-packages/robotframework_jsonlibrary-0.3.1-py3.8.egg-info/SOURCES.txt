@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+JSONLibrary/JSONLibraryKeywords.py
+JSONLibrary/__init__.py
+JSONLibrary/version.py
+robotframework_jsonlibrary.egg-info/PKG-INFO
+robotframework_jsonlibrary.egg-info/SOURCES.txt
+robotframework_jsonlibrary.egg-info/dependency_links.txt
+robotframework_jsonlibrary.egg-info/not-zip-safe
+robotframework_jsonlibrary.egg-info/requires.txt
+robotframework_jsonlibrary.egg-info/top_level.txt

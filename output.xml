@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200728 19:03:12.587" rpa="false">
+<suite id="s1" name="INSHURRobotFrameworkTestAPI" source="C:\Users\Dale\PycharmProjects\RobotAPIAutomation\INSHURRobotFrameworkTestAPI.robot">
+<test id="s1-t1" name="TC4FeaturesCustomers">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+</arguments>
+<assign>
+<var>${auth}</var>
+</assign>
+<msg timestamp="20200728 19:03:12.735" level="INFO">${auth} = ['adminuser', 'adminpassword']</msg>
+<status status="PASS" starttime="20200728 19:03:12.734" endtime="20200728 19:03:12.735"></status>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
+<arguments>
+<arg>tc4session</arg>
+<arg>${bare_url}</arg>
+<arg>auth=${auth}</arg>
+</arguments>
+<msg timestamp="20200728 19:03:12.735" level="INFO">Creating Session using : alias=tc4session, url=http://simondfranklininshur.pythonanywhere.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001D27A2039A0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200728 19:03:12.735" endtime="20200728 19:03:12.735"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>tc4session</arg>
+<arg>/customers</arg>
+</arguments>
+<assign>
+<var>${response}</var>
+</assign>
+<msg timestamp="20200728 19:03:13.045" level="INFO">GET Request : url=http://simondfranklininshur.pythonanywhere.com/customers 
+ path_url=/customers 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Basic YWRtaW51c2VyOmFkbWlucGFzc3dvcmQ='} 
+ body=None 
+ </msg>
+<msg timestamp="20200728 19:03:13.046" level="INFO">GET Response : url=http://simondfranklininshur.pythonanywhere.com/customers 
+ status=200, reason=OK 
+ body={"customers":[{"email":"customer1@inshur.com","username":"customer1"},{"email":"customer2@inshur.com","username":"customer2"},{"email":"customer3@inshur.com","username":"customer3"},{"email":"customer4@inshur.com","username":"customer4"},{"email":"customer5@inshur.com","username":"customer5"},{"email":"customer6@inshur.com","username":"customer6"}]}
+ 
+ </msg>
+<msg timestamp="20200728 19:03:13.046" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200728 19:03:12.736" endtime="20200728 19:03:13.046"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.status_code}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.046" endtime="20200728 19:03:13.046"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.047" endtime="20200728 19:03:13.047"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${response.headers}</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.047" endtime="20200728 19:03:13.047"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${response.content}</arg>
+</arguments>
+<assign>
+<var>${body}</var>
+</assign>
+<msg timestamp="20200728 19:03:13.048" level="INFO">${body} = {"customers":[{"email":"customer1@inshur.com","username":"customer1"},{"email":"customer2@inshur.com","username":"customer2"},{"email":"customer3@inshur.com","username":"customer3"},{"email":"customer...</msg>
+<status status="PASS" starttime="20200728 19:03:13.047" endtime="20200728 19:03:13.048"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${body}</arg>
+<arg>customer1</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.048" endtime="20200728 19:03:13.048"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${body}</arg>
+<arg>customer2</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.048" endtime="20200728 19:03:13.048"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${body}</arg>
+<arg>customer3</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.048" endtime="20200728 19:03:13.049"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${body}</arg>
+<arg>customer4</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.049" endtime="20200728 19:03:13.049"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${body}</arg>
+<arg>customer5</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.049" endtime="20200728 19:03:13.049"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${body}</arg>
+<arg>customer6</arg>
+</arguments>
+<status status="PASS" starttime="20200728 19:03:13.049" endtime="20200728 19:03:13.049"></status>
+</kw>
+<status status="PASS" starttime="20200728 19:03:12.734" endtime="20200728 19:03:13.049" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200728 19:03:12.589" endtime="20200728 19:03:13.050"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="INSHURRobotFrameworkTestAPI">INSHURRobotFrameworkTestAPI</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

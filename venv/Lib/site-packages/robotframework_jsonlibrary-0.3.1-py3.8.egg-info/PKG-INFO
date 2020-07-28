@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: robotframework-jsonlibrary
+Version: 0.3.1
+Summary: robotframework-jsonlibrary is a Robot Framework test library for manipulating JSON Object. You can manipulate your JSON object using JSONPath
+Home-page: https://github.com/nottyo/robotframework-jsonlibrary.git
+Author: Traitanit Huangsri
+Author-email: traitanit.hua@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: robotframework-jsonlibrary
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
