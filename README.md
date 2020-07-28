@@ -1,7 +1,7 @@
 # INSHURRobotAPIAutomation
 
 Install Pycharm <br> 
-Intall Phyton 
+Intall Phyton <br> 
 <br> 
 via pip install install the following libraries:
 
