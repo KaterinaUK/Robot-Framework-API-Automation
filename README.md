@@ -3,7 +3,7 @@
 Install Pycharm <br> 
 Intall Phyton <br> 
 <br> 
-via pip install install the following libraries:
+via pip install the following libraries:
 
 jsonpath-rw                1.4.0 <br> 
 jsonpath-rw-ext            1.2.2 <br> 
