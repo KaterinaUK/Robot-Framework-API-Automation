@@ -1,4 +1,4 @@
-# INSHURRobotAPIAutomation
+# Robot API Automation
 
 Install Pycharm <br> 
 Intall Phyton <br> 
