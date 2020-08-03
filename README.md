@@ -14,6 +14,3 @@ robotframework-requests    0.7.0 <br>
 navigate to folder containing the Robot file named INSHURRobotFrameworkTestAPI.robot <br>
 
 run test suite in the command prompt with: robot INSHURRobotFrameworkTestAPI.robot <br>
-
-Thank you for the challenge!<br>
-ps. Robot Framework is new to me, I learned this in my own time in the past month or so. <br>
